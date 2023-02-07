@@ -1,0 +1,17 @@
+version: '3.3'
+services:
+    legendary-bedrock-container:
+        volumes:
+            - 'minecraft-data:/minecraft'
+        environment:
+            - TZ=Japan/Tokyo
+        ports:
+            - '19132:19132/udp'
+            - '19132:19132'
+        restart: unless-stopped
+        image: '05jchambers/legendary-bedrock-container:latest'
+
+volumes:
+  minecraft-data:
+    name: minecraft-data
+    external: true
