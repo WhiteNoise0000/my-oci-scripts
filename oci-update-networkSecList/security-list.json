@@ -1,0 +1,99 @@
+[
+  {
+    "description": null,
+    "icmp-options": null,
+    "is-stateless": false,
+    "protocol": "6",
+    "source": "<HOME_IPADDR>/32",
+    "source-type": "CIDR_BLOCK",
+    "tcp-options": {
+      "destination-port-range": {
+        "max": 22,
+        "min": 22
+      },
+      "source-port-range": null
+    },
+    "udp-options": null
+  },
+  {
+    "description": null,
+    "icmp-options": {
+      "code": 4,
+      "type": 3
+    },
+    "is-stateless": false,
+    "protocol": "1",
+    "source": "0.0.0.0/0",
+    "source-type": "CIDR_BLOCK",
+    "tcp-options": null,
+    "udp-options": null
+  },
+  {
+    "description": null,
+    "icmp-options": null,
+    "is-stateless": false,
+    "protocol": "1",
+    "source": "10.0.0.0/16",
+    "source-type": "CIDR_BLOCK",
+    "tcp-options": null,
+    "udp-options": null
+  },
+  {
+    "description": null,
+    "icmp-options": null,
+    "is-stateless": false,
+    "protocol": "6",
+    "source": "10.0.0.0/16",
+    "source-type": "CIDR_BLOCK",
+    "tcp-options": null,
+    "udp-options": null
+  },
+  {
+    "description": "HTTP",
+    "icmp-options": null,
+    "is-stateless": false,
+    "protocol": "6",
+    "source": "0.0.0.0/0",
+    "source-type": "CIDR_BLOCK",
+    "tcp-options": {
+      "destination-port-range": {
+        "max": 80,
+        "min": 80
+      },
+      "source-port-range": null
+    },
+    "udp-options": null
+  },
+  {
+    "description": "HTTPS",
+    "icmp-options": null,
+    "is-stateless": false,
+    "protocol": "6",
+    "source": "0.0.0.0/0",
+    "source-type": "CIDR_BLOCK",
+    "tcp-options": {
+      "destination-port-range": {
+        "max": 443,
+        "min": 443
+      },
+      "source-port-range": null
+    },
+    "udp-options": null
+  },
+  {
+    "description": "Minecraft UDP",
+    "icmp-options": null,
+    "is-stateless": false,
+    "protocol": "17",
+    "source": "<HOME_IPADDR>/32",
+    "source-type": "CIDR_BLOCK",
+    "tcp-options": null,
+    "udp-options": {
+      "destination-port-range": {
+        "max": 19132,
+        "min": 19132
+      },
+      "source-port-range": null
+    }
+  }
+]
