@@ -1,5 +1,6 @@
 # oci-update-networkSecList
 OracleCloudのセキュリティリストへ、自宅グローバルIPを定期反映
+
 →自宅NASのcronへ登録して利用
 
 # Link
