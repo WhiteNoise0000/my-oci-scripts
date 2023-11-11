@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+pushd "$(dirname "$0")" || exit
 
 # 対象のセキュリティリストID
 LIST_ID=[replace security-list id]
@@ -8,6 +9,7 @@ HOME_IPADDR=$(curl curl https://domains.google.com/checkip -4)
 
 if [ "$HOME_IPADDR" = "$(cat bef_ip.txt)" ]; then
     echo "$(date '+%y/%m/%d %H:%M:%S') skip"
+    popd || exit
     exit
 fi
 
@@ -15,7 +17,9 @@ fi
 sed -e "s/<HOME_IPADDR>/${HOME_IPADDR}/g" ./security-list.json > security-list_home.json
 
 # Oracle Cloud反映
-oci network security-list update --security-list-id $LIST_ID --ingress-security-rules file://security-list_home.json --force
+oci network security-list update --security-list-id "$LIST_ID" --ingress-security-rules file://security-list_home.json --force
 
 # 反映済みIPアドレス保存
 echo "$HOME_IPADDR" > bef_ip.txt
+popd || exit
+exit
