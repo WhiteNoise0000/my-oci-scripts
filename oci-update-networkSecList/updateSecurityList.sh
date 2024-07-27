@@ -5,7 +5,7 @@ pushd "$(dirname "$0")" || exit
 LIST_ID=[replace security-list id]
 
 # グローバルIPv4アドレス取得
-HOME_IPADDR=$(curl curl https://domains.google.com/checkip -4)
+HOME_IPADDR=$(curl https://checkip.amazonaws.com/)
 
 if [ "$HOME_IPADDR" = "$(cat bef_ip.txt)" ]; then
     echo "$(date '+%y/%m/%d %H:%M:%S') skip"
